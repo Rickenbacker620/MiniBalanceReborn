@@ -1,0 +1,10 @@
+{
+  "files.associations": {
+    "*.yml": "yaml",
+    "*.cjson": "jsonc",
+    "*.wxss": "css",
+    "*.wxs": "javascript",
+    "usart.h": "c",
+    "sys.h": "c"
+  }
+}

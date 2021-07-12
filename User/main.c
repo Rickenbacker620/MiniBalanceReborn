@@ -18,43 +18,43 @@ u8 rxbuf[8], Urxbuf[8], CAN_ON_Flag, Usart_ON_Flag, Usart_Flag, PID_Send;
 int RC_Velocity;
 int main(void)
 {
-	delay_init();
-	JTAG_Set(SWD_ENABLE);
-	LED_Init();
-	KEY_Init();
-	MY_NVIC_PriorityGroupConfig(2);
-	MiniBalance_PWM_Init(7199, 0);
-	Servo_PWM_Init(9999, 71);
-	OLED_Init();
-	Encoder_Init_TIM2();
-	Encoder_Init_TIM3();
-	Flag_Way = 1;
-	Flag_Show = 0;
-	Flag_Stop = 1;
-	delay_ms(500); //=====延时等待稳定
+    delay_init();
+    JTAG_Set(SWD_ENABLE);
+    LED_Init();
+    KEY_Init();
+    MY_NVIC_PriorityGroupConfig(2);
+    MiniBalance_PWM_Init(7199, 0);
+    Servo_PWM_Init(9999, 71);
+    OLED_Init();
+    Encoder_Init_TIM2();
+    Encoder_Init_TIM3();
+    Flag_Way = 1;
+    Flag_Show = 0;
+    Flag_Stop = 1;
+    delay_ms(500); //=====延时等待稳定
 
-	PS2_Init();
-	PS2_SetInit();
+    PS2_Init();
+    PS2_SetInit();
 
-	Target_Left = 0;
-	Target_Right = 0;
+    Target_Left = 0;
+    Target_Right = 0;
 
-	TIM6_Int_Init(99, 7199); //=====10ms定时中断初始化
-	Accel_Key = 4;
-	while (1)
-	{
-		PS2_KEY = PS2_DataKey();
+    TIM6_Int_Init(99, 7199); //=====10ms定时中断初始化
+    Accel_Key = 4;
+    while (1)
+    {
+        PS2_KEY = PS2_DataKey();
 
-		PS2_LX = PS2_AnologData(PSS_LX); //PS2数据采集
-		PS2_LY = PS2_AnologData(PSS_LY);
-		PS2_RX = PS2_AnologData(PSS_RX);
-		PS2_RY = PS2_AnologData(PSS_RY);
+        PS2_LX = PS2_AnologData(PSS_LX); //PS2数据采集
+        PS2_LY = PS2_AnologData(PSS_LY);
+        PS2_RX = PS2_AnologData(PSS_RX);
+        PS2_RY = PS2_AnologData(PSS_RY);
 
-		oled_show(); //显示屏打开
-		delay_flag = 1;
+        oled_show(); //显示屏打开
+        delay_flag = 1;
 
-		delay_50 = 0;
-		while (delay_flag)
-			; //通过定时中断实现的50ms精准延时
-	}
+        delay_50 = 0;
+        while (delay_flag)
+            ; //通过定时中断实现的50ms精准延时
+    }
 }

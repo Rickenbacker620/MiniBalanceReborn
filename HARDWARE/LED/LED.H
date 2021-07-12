@@ -2,8 +2,8 @@
 #define __LED_H
 #include "sys.h"
 
-//LED ¶Ë¿Ú¶¨Òå
-#define LED PBout(13)  //LED¿ØÖÆÒı½Å
-void LED_Init(void);  //³õÊ¼»¯
+//LED ç«¯å£å®šä¹‰
+#define LED PBout(13) //LEDæ§åˆ¶å¼•è„š
+void LED_Init(void);  //åˆå§‹åŒ–
 void Led_Flash(u16 time);
 #endif

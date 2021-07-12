@@ -1,7 +1,8 @@
 #include "stm32f10x.h"
 #include "sys.h"
 
-u8 Flag_Left, Flag_Right, Flag_Direction = 0, Flag_Way, Flag_Next; //蓝牙遥控相关的变量
+u8 Flag_Left, Flag_Right, Flag_Direction = 0, Flag_Way,
+                          Flag_Next; //蓝牙遥控相关的变量
 u8 operationMode;
 u8 Flag_Stop = 1, Flag_Show;
 int Encoder_Left, Encoder_Right;
@@ -16,6 +17,7 @@ float Tand;
 
 u8 rxbuf[8], Urxbuf[8], CAN_ON_Flag, Usart_ON_Flag, Usart_Flag, PID_Send;
 int RC_Velocity;
+
 int main(void)
 {
     delay_init();
@@ -28,6 +30,7 @@ int main(void)
     OLED_Init();
     Encoder_Init_TIM2();
     Encoder_Init_TIM3();
+    usart1_init(115200);
     Flag_Way = 1;
     Flag_Show = 0;
     Flag_Stop = 1;
@@ -45,10 +48,11 @@ int main(void)
     {
         PS2_KEY = PS2_DataKey();
 
-        PS2_LX = PS2_AnologData(PSS_LX); //PS2数据采集
+        PS2_LX = PS2_AnologData(PSS_LX); // PS2数据采集
         PS2_LY = PS2_AnologData(PSS_LY);
         PS2_RX = PS2_AnologData(PSS_RX);
         PS2_RY = PS2_AnologData(PSS_RY);
+        printf("%d", PS2_LX);
 
         oled_show(); //显示屏打开
         delay_flag = 1;

@@ -1,10 +1,12 @@
 {
-  "files.associations": {
-    "*.yml": "yaml",
-    "*.cjson": "jsonc",
-    "*.wxss": "css",
-    "*.wxs": "javascript",
-    "usart.h": "c",
-    "sys.h": "c"
-  }
+    "files.associations": {
+        "*.yml": "yaml",
+        "*.cjson": "jsonc",
+        "*.wxss": "css",
+        "*.wxs": "javascript",
+        "usart.h": "c",
+        "sys.h": "c",
+        "LED.C": "cpp",
+        "stm32f10x.h": "c"
+    }
 }

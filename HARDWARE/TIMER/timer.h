@@ -2,10 +2,10 @@
 #define __TIMER_H
 #include <sys.h>	 
 
-#define TRIPA PCout(0)//AÂ·³¬Éù²¨ PC0½Ó´¥·¢Òı½Å PA0½Ó»Ø²¨Òı½Å
-#define TRIPB PCout(4)//BÂ·³¬Éù²¨ PC4½Ó´¥·¢Òı½Å PA1½Ó»Ø²¨Òı½Å
-#define TRIPC PBout(5)//CÂ·³¬Éù²¨ PB5½Ó´¥·¢Òı½Å PB6½Ó»Ø²¨Òı½Å
-#define TRIPD PBout(4)//DÂ·³¬Éù²¨ PB4½Ó´¥·¢Òı½Å PB7½Ó»Ø²¨Òı½Å
+#define TRIPA PCout(0)//Aè·¯è¶…å£°æ³¢ PC0æ¥è§¦å‘å¼•è„š PA0æ¥å›æ³¢å¼•è„š
+#define TRIPB PCout(4)//Bè·¯è¶…å£°æ³¢ PC4æ¥è§¦å‘å¼•è„š PA1æ¥å›æ³¢å¼•è„š
+#define TRIPC PBout(5)//Cè·¯è¶…å£°æ³¢ PB5æ¥è§¦å‘å¼•è„š PB6æ¥å›æ³¢å¼•è„š
+#define TRIPD PBout(4)//Dè·¯è¶…å£°æ³¢ PB4æ¥è§¦å‘å¼•è„š PB7æ¥å›æ³¢å¼•è„š
 
 void TIM5_Cap_Init(u16 arr,u16 psc)	; 
 void TIM4_Cap_Init(u16 arr,u16 psc)	;  

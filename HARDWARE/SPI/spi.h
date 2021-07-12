@@ -3,11 +3,11 @@
 #include "sys.h"
 
 ////////////////////////////////////////////////////////////////////////////////// 	  
-// SPI×ÜÏßËÙ¶ÈÉèÖÃ  
+// SPIæ€»çº¿é€Ÿåº¦è®¾ç½®  
  				  
-void SPI1_Init(void);			 //³õÊ¼»¯SPI¿Ú
-void SPI1_SetSpeed(u8 SpeedSet); //ÉèÖÃSPIËÙ¶È   
-u8 SPI1_ReadWriteByte(u8 TxData);//SPI×ÜÏß¶ÁĞ´Ò»¸ö×Ö½Ú
+void SPI1_Init(void);			 //åˆå§‹åŒ–SPIå£
+void SPI1_SetSpeed(u8 SpeedSet); //è®¾ç½®SPIé€Ÿåº¦   
+u8 SPI1_ReadWriteByte(u8 TxData);//SPIæ€»çº¿è¯»å†™ä¸€ä¸ªå­—èŠ‚
 		 
 #endif
 

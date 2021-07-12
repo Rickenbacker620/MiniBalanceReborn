@@ -1,17 +1,17 @@
 #include "show.h"
 
-unsigned char i;          //¼ÆÊı±äÁ¿
-unsigned char Send_Count; //´®¿ÚĞèÒª·¢ËÍµÄÊı¾İ¸öÊı
+unsigned char i;          //è®¡æ•°å˜é‡
+unsigned char Send_Count; //ä¸²å£éœ€è¦å‘é€çš„æ•°æ®ä¸ªæ•°
 /**************************************************************************
-º¯Êı¹¦ÄÜ£ºOLEDÏÔÊ¾
-Èë¿Ú²ÎÊı£ºÎŞ
-·µ»Ø  Öµ£ºÎŞ
+å‡½æ•°åŠŸèƒ½ï¼šOLEDæ˜¾ç¤º
+å…¥å£å‚æ•°ï¼šæ— 
+è¿”å›  å€¼ï¼šæ— 
 **************************************************************************/
 						int accz;
 void oled_show(void)
 {
 												
-					//=============µÚ3ĞĞÏÔÊ¾×óµç»úµÄ×´Ì¬=======================//	
+					//=============ç¬¬3è¡Œæ˜¾ç¤ºå·¦ç”µæœºçš„çŠ¶æ€=======================//	
 						if( Target_Left<0)		  OLED_ShowString(00,20,"-"),
 																OLED_ShowNumber(15,20,-Target_Left,5,12);
 					else                 	OLED_ShowString(0,20,"+"),
@@ -20,7 +20,7 @@ void oled_show(void)
 																OLED_ShowNumber(95,20,-Encoder_Left,4,12);
 					else                 	OLED_ShowString(80,20,"+"),
 																OLED_ShowNumber(95,20, Encoder_Left,4,12);
-					//=============µÚ4ĞĞÏÔÊ¾ÓÒµç»úµÄ×´Ì¬=======================//	
+					//=============ç¬¬4è¡Œæ˜¾ç¤ºå³ç”µæœºçš„çŠ¶æ€=======================//	
 						if( Target_Right<0)		  OLED_ShowString(00,30,"-"),
 																OLED_ShowNumber(15,30,-Target_Right,5,12);
 					else                 	OLED_ShowString(0,30,"+"),
@@ -30,18 +30,18 @@ void oled_show(void)
 					else                 	OLED_ShowString(80,30,"+"),
 																OLED_ShowNumber(95,30, Encoder_Right,4,12);	
 					
-					//=============µÚ5ĞĞÏÔÊ¾¶æ»úµÄ×´Ì¬=======================//	
-				 	OLED_ShowString(00,40,"Servo:"),	//¶æ»ú×´Ì¬
+					//=============ç¬¬5è¡Œæ˜¾ç¤ºèˆµæœºçš„çŠ¶æ€=======================//	
+				 	OLED_ShowString(00,40,"Servo:"),	//èˆµæœºçŠ¶æ€
 					OLED_ShowNumber(60,40, Servo,4,12);	
-					//=============µÚ6ĞĞÏÔÊ¾µçÑ¹Ä£Ê½µÈ=======================//	
-                       //  µç»úÊ¹ÄÜ/Ê¹ÄÜÏÔÊ¾
-											if(Flag_Stop==0)//¸ù¾İFlag_Stop±êÖ¾Î»ÏÔÊ¾µç»úµÄ×´Ì¬
+					//=============ç¬¬6è¡Œæ˜¾ç¤ºç”µå‹æ¨¡å¼ç­‰=======================//	
+                       //  ç”µæœºä½¿èƒ½/ä½¿èƒ½æ˜¾ç¤º
+											if(Flag_Stop==0)//æ ¹æ®Flag_Stopæ ‡å¿—ä½æ˜¾ç¤ºç”µæœºçš„çŠ¶æ€
 											OLED_ShowString(103,50,"O-N");
 											if(Flag_Stop==1)
 											OLED_ShowString(103,50,"OFF");
 
-                      OLED_ShowString(0,50,"PS2"); //Ò£¿ØÄ£Ê½
-											OLED_Refresh_Gram();	//Ë¢ĞÂ
+                      OLED_ShowString(0,50,"PS2"); //é¥æ§æ¨¡å¼
+											OLED_Refresh_Gram();	//åˆ·æ–°
 }
 
 

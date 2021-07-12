@@ -1,7 +1,7 @@
 #include "stm32f10x.h"
 #include "sys.h"
 
-u8 Flag_Left, Flag_Right, Flag_Direction = 0, Flag_Way, Flag_Next; //À¶ÑÀÒ£¿ØÏà¹ØµÄ±äÁ¿
+u8 Flag_Left, Flag_Right, Flag_Direction = 0, Flag_Way, Flag_Next; //è“ç‰™é¥æ§ç›¸å…³çš„å˜é‡
 u8 operationMode;
 u8 Flag_Stop = 1, Flag_Show;
 int Encoder_Left, Encoder_Right;
@@ -31,7 +31,7 @@ int main(void)
     Flag_Way = 1;
     Flag_Show = 0;
     Flag_Stop = 1;
-    delay_ms(500); //=====ÑÓÊ±µÈ´ıÎÈ¶¨
+    delay_ms(500); //=====å»¶æ—¶ç­‰å¾…ç¨³å®š
 
     PS2_Init();
     PS2_SetInit();
@@ -39,22 +39,22 @@ int main(void)
     Target_Left = 0;
     Target_Right = 0;
 
-    TIM6_Int_Init(99, 7199); //=====10ms¶¨Ê±ÖĞ¶Ï³õÊ¼»¯
+    TIM6_Int_Init(99, 7199); //=====10mså®šæ—¶ä¸­æ–­åˆå§‹åŒ–
     Accel_Key = 4;
     while (1)
     {
         PS2_KEY = PS2_DataKey();
 
-        PS2_LX = PS2_AnologData(PSS_LX); //PS2Êı¾İ²É¼¯
+        PS2_LX = PS2_AnologData(PSS_LX); //PS2æ•°æ®é‡‡é›†
         PS2_LY = PS2_AnologData(PSS_LY);
         PS2_RX = PS2_AnologData(PSS_RX);
         PS2_RY = PS2_AnologData(PSS_RY);
 
-        oled_show(); //ÏÔÊ¾ÆÁ´ò¿ª
+        oled_show(); //æ˜¾ç¤ºå±æ‰“å¼€
         delay_flag = 1;
 
         delay_50 = 0;
         while (delay_flag)
-            ; //Í¨¹ı¶¨Ê±ÖĞ¶ÏÊµÏÖµÄ50ms¾«×¼ÑÓÊ±
+            ; //é€šè¿‡å®šæ—¶ä¸­æ–­å®ç°çš„50msç²¾å‡†å»¶æ—¶
     }
 }

@@ -3,11 +3,11 @@
 #include "sys.h"
 
 #define KEY PBin(14)
-void KEY_Init(void);          //°´¼ü³õÊ¼»¯
-u8 click_N_Double (u8 time);  //µ¥»÷°´¼üÉ¨ÃèºÍË«»÷°´¼üÉ¨Ãè
-u8 click(void);               //µ¥»÷°´¼üÉ¨Ãè
-u8 Long_Press(void);           //³¤°´É¨Ãè  
+void KEY_Init(void);          //æŒ‰é”®åˆå§‹åŒ–
+u8 click_N_Double (u8 time);  //å•å‡»æŒ‰é”®æ‰«æå’ŒåŒå‡»æŒ‰é”®æ‰«æ
+u8 click(void);               //å•å‡»æŒ‰é”®æ‰«æ
+u8 Long_Press(void);           //é•¿æŒ‰æ‰«æ  
 u8  select(int);
 
-void user_Key_EXTI_Init(void);	//Íâ²¿ÖĞ¶Ï³õÊ¼»¯		 
+void user_Key_EXTI_Init(void);	//å¤–éƒ¨ä¸­æ–­åˆå§‹åŒ–		 
 #endif  

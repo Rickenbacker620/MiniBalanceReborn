@@ -5,7 +5,7 @@
 #define PWMA1   TIM8->CCR2  
 #define PWMA2   TIM8->CCR1 
 
-#define SERVO   TIM1->CCR1  //¶æ»úÒý½Å
+#define SERVO   TIM1->CCR1  //èˆµæœºå¼•è„š
 
 #define PWMB1   TIM8->CCR4  
 #define PWMB2   TIM8->CCR3

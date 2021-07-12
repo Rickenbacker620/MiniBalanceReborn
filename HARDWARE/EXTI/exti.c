@@ -1,30 +1,30 @@
 #include "exti.h"
 
 /**************************************************************************
-º¯Êı¹¦ÄÜ£ºÍâ²¿ÖĞ¶Ï³õÊ¼»¯
-Èë¿Ú²ÎÊı£ºÎŞ
-·µ»Ø  Öµ£ºÎŞ 
+å‡½æ•°åŠŸèƒ½ï¼šå¤–éƒ¨ä¸­æ–­åˆå§‹åŒ–
+å…¥å£å‚æ•°ï¼šæ— 
+è¿”å›  å€¼ï¼šæ—  
 **************************************************************************/
 void MiniBalance_EXTI_Init(void)
 {  
 		GPIO_InitTypeDef GPIO_InitStructure;
 		EXTI_InitTypeDef EXTI_InitStructure;
 		NVIC_InitTypeDef NVIC_InitStructure;
-		RCC_APB2PeriphClockCmd(RCC_APB2Periph_AFIO,ENABLE);//Íâ²¿ÖĞ¶Ï£¬ĞèÒªÊ¹ÄÜAFIOÊ±ÖÓ
-		RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOB, ENABLE); //Ê¹ÄÜGPIO¶Ë¿ÚÊ±ÖÓ
-		GPIO_InitStructure.GPIO_Pin = GPIO_Pin_15;	            //¶Ë¿ÚÅäÖÃ
-		GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IPU;         //ÉÏÀ­ÊäÈë
-		GPIO_Init(GPIOB, &GPIO_InitStructure);					      //¸ù¾İÉè¶¨²ÎÊı³õÊ¼»¯GPIO
+		RCC_APB2PeriphClockCmd(RCC_APB2Periph_AFIO,ENABLE);//å¤–éƒ¨ä¸­æ–­ï¼Œéœ€è¦ä½¿èƒ½AFIOæ—¶é’Ÿ
+		RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOB, ENABLE); //ä½¿èƒ½GPIOç«¯å£æ—¶é’Ÿ
+		GPIO_InitStructure.GPIO_Pin = GPIO_Pin_15;	            //ç«¯å£é…ç½®
+		GPIO_InitStructure.GPIO_Mode = GPIO_Mode_IPU;         //ä¸Šæ‹‰è¾“å…¥
+		GPIO_Init(GPIOB, &GPIO_InitStructure);					      //æ ¹æ®è®¾å®šå‚æ•°åˆå§‹åŒ–GPIO
   	GPIO_EXTILineConfig(GPIO_PortSourceGPIOB,GPIO_PinSource15);
   	EXTI_InitStructure.EXTI_Line=EXTI_Line15;
   	EXTI_InitStructure.EXTI_Mode = EXTI_Mode_Interrupt;	
-  	EXTI_InitStructure.EXTI_Trigger = EXTI_Trigger_Falling;//ÏÂ½µÑØ´¥·¢
+  	EXTI_InitStructure.EXTI_Trigger = EXTI_Trigger_Falling;//ä¸‹é™æ²¿è§¦å‘
   	EXTI_InitStructure.EXTI_LineCmd = ENABLE;
-  	EXTI_Init(&EXTI_InitStructure);	 	//¸ù¾İEXTI_InitStructÖĞÖ¸¶¨µÄ²ÎÊı³õÊ¼»¯ÍâÉèEXTI¼Ä´æÆ÷
-		NVIC_InitStructure.NVIC_IRQChannel = EXTI15_10_IRQn;			//Ê¹ÄÜ°´¼üËùÔÚµÄÍâ²¿ÖĞ¶ÏÍ¨µÀ
-  	NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 0x01;	//ÇÀÕ¼ÓÅÏÈ¼¶2£¬ 
-  	NVIC_InitStructure.NVIC_IRQChannelSubPriority = 0x01;					//×ÓÓÅÏÈ¼¶1
-  	NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;								//Ê¹ÄÜÍâ²¿ÖĞ¶ÏÍ¨µÀ
+  	EXTI_Init(&EXTI_InitStructure);	 	//æ ¹æ®EXTI_InitStructä¸­æŒ‡å®šçš„å‚æ•°åˆå§‹åŒ–å¤–è®¾EXTIå¯„å­˜å™¨
+		NVIC_InitStructure.NVIC_IRQChannel = EXTI15_10_IRQn;			//ä½¿èƒ½æŒ‰é”®æ‰€åœ¨çš„å¤–éƒ¨ä¸­æ–­é€šé“
+  	NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 0x01;	//æŠ¢å ä¼˜å…ˆçº§2ï¼Œ 
+  	NVIC_InitStructure.NVIC_IRQChannelSubPriority = 0x01;					//å­ä¼˜å…ˆçº§1
+  	NVIC_InitStructure.NVIC_IRQChannelCmd = ENABLE;								//ä½¿èƒ½å¤–éƒ¨ä¸­æ–­é€šé“
   	NVIC_Init(&NVIC_InitStructure); 
 }
 

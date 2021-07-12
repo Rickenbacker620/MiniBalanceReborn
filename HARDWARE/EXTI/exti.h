@@ -2,8 +2,8 @@
 #define __EXIT_H	 
 #include "sys.h"
 
-#define INT PBin(14)   //Á¬½Óµ½MPU6050µÄÖĞ¶ÏÒı½Å
-void MiniBalance_EXTI_Init(void);	//Íâ²¿ÖĞ¶Ï³õÊ¼»¯		 					    
+#define INT PBin(14)   //è¿æ¥åˆ°MPU6050çš„ä¸­æ–­å¼•è„š
+void MiniBalance_EXTI_Init(void);	//å¤–éƒ¨ä¸­æ–­åˆå§‹åŒ–		 					    
 #endif
 
 

@@ -2,7 +2,7 @@
 #define __OLED_H			  	 
 #include "sys.h"
 
-//-----------------OLED¶Ë¿Ú¶¨Òå---------------- 
+//-----------------OLEDç«¯å£å®šä¹‰---------------- 
 #define OLED_RST_Clr() PCout(15)=0   //RST
 #define OLED_RST_Set() PCout(15)=1   //RST
 
@@ -15,9 +15,9 @@
 #define OLED_SDIN_Clr()  PCout(14)=0   //SDA
 #define OLED_SDIN_Set()  PCout(14)=1   //SDA
 
-#define OLED_CMD  0	//Ğ´ÃüÁî
-#define OLED_DATA 1	//Ğ´Êı¾İ
-//OLED¿ØÖÆÓÃº¯Êı
+#define OLED_CMD  0	//å†™å‘½ä»¤
+#define OLED_DATA 1	//å†™æ•°æ®
+//OLEDæ§åˆ¶ç”¨å‡½æ•°
 void OLED_WR_Byte(u8 dat,u8 cmd);	    
 void OLED_Display_On(void);
 void OLED_Display_Off(void);

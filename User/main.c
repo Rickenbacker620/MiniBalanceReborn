@@ -18,6 +18,8 @@ float Tand;
 u8 rxbuf[8], Urxbuf[8], CAN_ON_Flag, Usart_ON_Flag, Usart_Flag, PID_Send;
 int RC_Velocity;
 
+int testint;
+
 int main(void)
 {
     delay_init();
@@ -52,7 +54,7 @@ int main(void)
         PS2_LY = PS2_AnologData(PSS_LY);
         PS2_RX = PS2_AnologData(PSS_RX);
         PS2_RY = PS2_AnologData(PSS_RY);
-        printf("%d", PS2_LX);
+        // printf("%d %d %d %d \n", TIM8->CCR1, TIM8->CCR2, TIM8->CCR3, TIM8->CCR4);
 
         oled_show(); //显示屏打开
         delay_flag = 1;
@@ -60,5 +62,7 @@ int main(void)
         delay_50 = 0;
         while (delay_flag)
             ; //通过定时中断实现的50ms精准延时
+        printf("\n");
+        testint++;
     }
 }

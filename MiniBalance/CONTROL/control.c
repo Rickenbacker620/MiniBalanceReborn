@@ -37,7 +37,7 @@ void Kinematic_Analysis(float velocity, float angle)
          定时中断触发
          严格保证采样和数据处理的时间同步
 **************************************************************************/
-void TIM6_IRQHandler(void) //TIM6中断
+void TIM6_IRQHandler(void) // TIM6中断
 {
     if (TIM_GetITStatus(TIM6, TIM_IT_Update) != RESET)
     {
@@ -45,6 +45,7 @@ void TIM6_IRQHandler(void) //TIM6中断
         Flag_Target = !Flag_Target;                 //分频标志位
         if (delay_flag == 1)
         {
+            printf("%d", testint);
             if (++delay_50 == 2)
                 delay_50 = 0, delay_flag = 0; //给主函数提供50ms的精准延时
         }

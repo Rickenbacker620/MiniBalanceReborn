@@ -125,7 +125,7 @@
         <SetRegEntry>
           <Number>0</Number>
           <Key>DLGTARM</Key>
-          <Name>(1010=75,104,525,661,0)(1007=-1,-1,-1,-1,0)(1008=-1,-1,-1,-1,0)(1009=-1,-1,-1,-1,0)</Name>
+          <Name>(1010=75,104,525,661,0)(1007=-1,-1,-1,-1,0)(1008=717,85,1093,321,0)(1009=-1,-1,-1,-1,0)</Name>
         </SetRegEntry>
         <SetRegEntry>
           <Number>0</Number>
@@ -152,18 +152,18 @@
         <Bp>
           <Number>0</Number>
           <Type>0</Type>
-          <LineNumber>13</LineNumber>
+          <LineNumber>31</LineNumber>
           <EnabledFlag>1</EnabledFlag>
-          <Address>134232104</Address>
+          <Address>134231942</Address>
           <ByteObject>0</ByteObject>
           <HtxType>0</HtxType>
           <ManyObjects>0</ManyObjects>
           <SizeOfObject>0</SizeOfObject>
           <BreakByAccess>0</BreakByAccess>
           <BreakIfRCount>1</BreakIfRCount>
-          <Filename>..\SYSTEM\sys\sys.c</Filename>
+          <Filename>..\SYSTEM\delay\delay.c</Filename>
           <ExecCommand></ExecCommand>
-          <Expression>\\MiniBalanceReborn\../SYSTEM/sys/sys.c\13</Expression>
+          <Expression>\\MiniBalanceReborn\../SYSTEM/delay/delay.c\31</Expression>
         </Bp>
       </Breakpoint>
       <WatchWindow1>

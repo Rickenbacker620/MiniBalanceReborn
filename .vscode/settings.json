@@ -7,6 +7,8 @@
         "usart.h": "c",
         "sys.h": "c",
         "LED.C": "cpp",
-        "stm32f10x.h": "c"
+        "stm32f10x.h": "c",
+        "DataScope_DP.C": "cpp",
+        "bsp_systick.h": "c"
     }
 }

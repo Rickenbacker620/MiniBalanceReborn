@@ -151,7 +151,10 @@ void JTAG_Set(u8 mode)
 void Stm32_Clock_Init(u8 PLL)
 {
     unsigned char temp = 0;
-    MYRCC_DeInit();        //复位并配置向量表
+    RCC_DeInit();
+    // MYRCC_DeInit();        //复位并配置向量表
+
+    MY_NVIC_SetVectorTable(0x08000000, 0x0);
     RCC->CR |= 0x00010000; //外部高速时钟使能HSEON
     while (!(RCC->CR >> 17))
         ;                   //等待外部时钟就绪

@@ -21,6 +21,8 @@ _sys_exit(int x)
 int fputc(int ch, FILE *f)
 {
     USART_SendData(USART1, (uint8_t)ch);
+
+    /* 等待发送完毕 */
     while (USART_GetFlagStatus(USART1, USART_FLAG_TXE) == RESET)
         ;
     return ch;

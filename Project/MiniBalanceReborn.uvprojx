@@ -339,7 +339,7 @@
               <MiscControls></MiscControls>
               <Define>USE_STDPERIPH_DRIVER,STM32F10X_HD</Define>
               <Undefine></Undefine>
-              <IncludePath>..\User;..\CMSIS;..\FWLIB\inc;..\HARDWARE;..\SYSTEM;..\SYSTEM\delay;..\SYSTEM\sys;..\SYSTEM\usart;..\HARDWARE\DMP;..\HARDWARE\IIC;..\HARDWARE\ENCODER;..\HARDWARE\OLED;..\MiniBalance\show;..\HARDWARE\LED;..\HARDWARE\KEY;..\HARDWARE\ADC;..\HARDWARE\MOTOR;..\HARDWARE\TIMER;..\HARDWARE\EXTI;..\MiniBalance\DataScope_DP;..\MiniBalance\filter;..\HARDWARE\STMFLASH;..\HARDWARE\USARTX;..\HARDWARE\NRF24L01;..\HARDWARE\SPI;..\HARDWARE\CAN;..\HARDWARE\PS2;..\HARDWARE\MPU9250;..\HARDWARE\SysTick</IncludePath>
+              <IncludePath>..\User;..\CMSIS;..\FWLIB\inc;..\HARDWARE;..\SYSTEM;..\SYSTEM\delay;..\SYSTEM\sys;..\SYSTEM\usart;..\HARDWARE\DMP;..\HARDWARE\IIC;..\HARDWARE\ENCODER;..\HARDWARE\OLED;..\MiniBalance\show;..\HARDWARE\LED;..\HARDWARE\KEY;..\HARDWARE\ADC;..\HARDWARE\MOTOR;..\HARDWARE\TIMER;..\HARDWARE\EXTI;..\MiniBalance\DataScope_DP;..\MiniBalance\filter;..\HARDWARE\STMFLASH;..\HARDWARE\USARTX;..\HARDWARE\NRF24L01;..\HARDWARE\SPI;..\HARDWARE\CAN;..\HARDWARE\PS2;..\HARDWARE\MPU9250</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>

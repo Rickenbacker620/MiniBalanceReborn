@@ -21,6 +21,7 @@ int RC_Velocity;
 int main(void)
 {
     delay_init();
+    JTAG_Set(SWD_ENABLE);
     LED_Init();
     KEY_Init();
     MY_NVIC_PriorityGroupConfig(2);
